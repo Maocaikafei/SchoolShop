@@ -1,0 +1,42 @@
+2020-06-16 11:16:11.064 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ShopDao.queryShopList] use [slave] Strategy SqlCommandType [SELECT]
+2020-06-16 11:16:11.199 [main] DEBUG com.mckf.myshop.dao.ShopDao.queryShopList - ==>  Preparing: select s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id,a.area_name, sc.shop_category_id,sc.shop_category_name from tb_shop s,tb_area a,tb_shop_category sc WHERE s.shop_category_id=? and a.area_id=s.area_id and sc.shop_category_id=s.shop_category_id ORDER BY s.priority DESC LIMIT ?,?; 
+2020-06-16 11:16:11.335 [main] DEBUG com.mckf.myshop.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 2(Integer)
+2020-06-16 11:16:11.383 [main] DEBUG com.mckf.myshop.dao.ShopDao.queryShopList - <==      Total: 2
+2020-06-16 11:16:11.389 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ShopDao.queryShopCount] use [slave] Strategy SqlCommandType [SELECT]
+2020-06-16 11:16:11.393 [main] DEBUG com.mckf.myshop.dao.ShopDao.queryShopCount - ==>  Preparing: select count(1) from tb_shop s,tb_area a,tb_shop_category sc WHERE s.shop_category_id=? and a.area_id=s.area_id and sc.shop_category_id=s.shop_category_id 
+2020-06-16 11:16:11.393 [main] DEBUG com.mckf.myshop.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2020-06-16 11:16:11.395 [main] DEBUG com.mckf.myshop.dao.ShopDao.queryShopCount - <==      Total: 1
+2020-06-16 16:33:18.058 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.queryProductCategory] use [slave] Strategy SqlCommandType [SELECT]
+2020-06-16 16:33:18.149 [main] DEBUG c.m.m.dao.ProductCategoryDao.queryProductCategory - ==>  Preparing: select * from tb_product_category where shop_id=? 
+2020-06-16 16:33:18.240 [main] DEBUG c.m.m.dao.ProductCategoryDao.queryProductCategory - ==> Parameters: 1(Long)
+2020-06-16 16:33:18.356 [main] DEBUG c.m.m.dao.ProductCategoryDao.queryProductCategory - <==      Total: 3
+2020-06-16 20:11:52.309 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.batchAddProductCategory] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:11:52.403 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2020-06-16 20:11:52.425 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==> Parameters: 包子(String), 5(Integer), 2020-06-16 20:11:52.225(Timestamp), 1(Long), 稀粥(String), 3(Integer), 2020-06-16 20:11:52.225(Timestamp), 1(Long)
+2020-06-16 20:11:52.440 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - <==    Updates: 2
+2020-06-16 20:13:20.864 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.batchAddProductCategory] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:13:20.911 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2020-06-16 20:13:20.942 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==> Parameters: 包子(String), 5(Integer), 2020-06-16 20:13:20.811(Timestamp), 1(Long), 稀粥(String), 3(Integer), 2020-06-16 20:13:20.811(Timestamp), 1(Long)
+2020-06-16 20:13:20.949 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - <==    Updates: 2
+2020-06-16 20:14:19.664 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.batchAddProductCategory] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:14:19.710 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2020-06-16 20:14:19.764 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==> Parameters: 包子(String), 5(Integer), 2020-06-16 20:13:49.246(Timestamp), 1(Long), 稀粥(String), 3(Integer), 2020-06-16 20:13:49.246(Timestamp), 1(Long)
+2020-06-16 20:14:19.764 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - <==    Updates: 2
+2020-06-16 20:16:35.990 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.batchAddProductCategory] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:16:36.053 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2020-06-16 20:17:26.217 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.batchAddProductCategory] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:17:26.249 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2020-06-16 20:17:26.302 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==> Parameters: 包子(String), 5(Integer), 2020-06-16 20:17:26.175(Timestamp), 1(Long), 稀粥(String), 3(Integer), 2020-06-16 20:17:26.175(Timestamp), 1(Long)
+2020-06-16 20:17:26.302 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - <==    Updates: 2
+2020-06-16 20:19:42.421 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.batchAddProductCategory] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:19:42.578 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2020-06-16 20:19:42.862 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==> Parameters: 包子(String), 5(Integer), 2020-06-16 20:19:04.989(Timestamp), 1(Long), 稀粥(String), 3(Integer), 2020-06-16 20:19:04.989(Timestamp), 1(Long)
+2020-06-16 20:19:42.867 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - <==    Updates: 2
+2020-06-16 20:22:05.647 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ProductCategoryDao.batchAddProductCategory] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:22:05.696 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==>  Preparing: insert into tb_product_category(product_category_name,priority,create_time,shop_id) values ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
+2020-06-16 20:22:05.737 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - ==> Parameters: 包子(String), 5(Integer), 2020-06-16 20:22:05.597(Timestamp), 1(Long), 稀粥(String), 3(Integer), 2020-06-16 20:22:05.597(Timestamp), 1(Long)
+2020-06-16 20:22:05.742 [main] DEBUG c.m.m.d.ProductCategoryDao.batchAddProductCategory - <==    Updates: 2
+2020-06-16 20:24:29.071 [main] DEBUG c.m.myshop.dao.split.DynamicDataSourceInterceptor - 设置方法[com.mckf.myshop.dao.ShopDao.insertShop] use [master] Strategy SqlCommandType [INSERT]
+2020-06-16 20:24:29.089 [main] DEBUG com.mckf.myshop.dao.ShopDao.insertShop - ==>  Preparing: insert into tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr, phone,shop_img,priority,create_time,last_edit_time,enable_status,advice) values (?,?,?,?, ?,?,?,?,?,?,?, ?,?) 
+2020-06-16 20:24:29.133 [main] DEBUG com.mckf.myshop.dao.ShopDao.insertShop - ==> Parameters: 1(Long), 2(Integer), 1(Long), 测试的店铺6(String), test(String), test(String), test(String), test(String), 1(Integer), 2020-06-16 20:24:29.052(Timestamp), 2020-06-16 20:24:29.052(Timestamp), 1(Integer), 审核中(String)
+2020-06-16 20:24:29.139 [main] DEBUG com.mckf.myshop.dao.ShopDao.insertShop - <==    Updates: 1

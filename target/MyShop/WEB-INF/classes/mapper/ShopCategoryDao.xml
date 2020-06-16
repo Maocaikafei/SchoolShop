@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mckf.myshop.dao.ShopCategoryDao">
+    <!--这里选出父类不为空的店铺类别因为我们的店铺类别有很多种，我们需要的是二级类别，也就是父类不为空的类别-->
+    <select id="queryShopCategory" resultType="com.mckf.myshop.entity.ShopCategory">
+        select * from tb_shop_category
+        <where>
+            <if test="shopCategoryCondition!=null">
+                and parent_id is not null
+            </if>
+            <if test="shopCategoryCondition.parent!=null">
+                and parent_id=#{shopCategoryCondition.parent.shopCategoryId}
+            </if>
+        </where>
+        order by priority DESC
+    </select>
+</mapper>

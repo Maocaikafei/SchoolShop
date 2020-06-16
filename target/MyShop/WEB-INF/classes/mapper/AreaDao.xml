@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace与我们编写好的AreaDao接口类对应-->
+<mapper namespace="com.mckf.myshop.dao.AreaDao">
+    <!--id与接口中的方法对应-->
+    <!--resultType指定返回类型，我们从数据库中获取的数据会自动转换为指定对象-->
+    <select id="queryArea" resultType="com.mckf.myshop.entity.Area">
+        select * from tb_area order by priority DESC
+    </select>
+</mapper>

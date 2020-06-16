@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace与我们编写好的AreaDao接口类对应-->
+<mapper namespace="com.mckf.myshop.dao.ProductCategoryDao">
+    <select id="queryProductCategory" parameterType="long"
+            resultType="com.mckf.myshop.entity.ProductCategory">
+        select * from tb_product_category
+        where shop_id=#{shopId}
+        order by priority desc
+    </select>
+
+    <insert id="batchAddProductCategory" parameterType="java.util.List">
+        insert into tb_product_category(product_category_name,priority,create_time,shop_id)
+        values
+        <foreach collection="productCategoryList" item="productCategory" separator="," index="index">
+            (
+            #{productCategory.productCategoryName},
+            #{productCategory.priority},
+            #{productCategory.createTime},
+            #{productCategory.shopId}
+            )
+        </foreach>
+    </insert>
+</mapper>

@@ -1,0 +1,11 @@
+2020-06-16 11:16:11.104 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：slave
+2020-06-16 11:16:11.389 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：slave
+2020-06-16 16:33:18.094 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：slave
+2020-06-16 20:11:52.340 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
+2020-06-16 20:13:20.864 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
+2020-06-16 20:14:19.664 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
+2020-06-16 20:16:35.990 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
+2020-06-16 20:17:26.217 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
+2020-06-16 20:19:42.425 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
+2020-06-16 20:22:05.648 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
+2020-06-16 20:24:29.072 [main] INFO  com.mckf.myshop.dao.split.DynamicDataSourceHolder - 使用的数据源是：master
